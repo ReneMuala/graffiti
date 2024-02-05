@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/home/descartes/Documents/workspaces/blend2d/playground/build",
+  "command": "/usr/bin/c++  -I/home/descartes/Documents/workspaces/blend2d/playground/libs/luacpp/Source -I/usr/include/lua5.4 -I/home/descartes/Documents/workspaces/blend2d/playground/libs -std=gnu++20 -o CMakeFiles/graffitiApi.dir/libGraffiti.cpp.o -c /home/descartes/Documents/workspaces/blend2d/playground/libGraffiti.cpp",
+  "file": "/home/descartes/Documents/workspaces/blend2d/playground/libGraffiti.cpp",
+  "output": "CMakeFiles/graffitiApi.dir/libGraffiti.cpp.o"
+},
+{
+  "directory": "/home/descartes/Documents/workspaces/blend2d/playground/build",
+  "command": "/usr/bin/c++  -I/home/descartes/Documents/workspaces/blend2d/playground/libs/luacpp/Source -I/usr/include/lua5.4 -I/home/descartes/Documents/workspaces/blend2d/playground/libs -std=gnu++20 -o CMakeFiles/app.dir/main.cpp.o -c /home/descartes/Documents/workspaces/blend2d/playground/main.cpp",
+  "file": "/home/descartes/Documents/workspaces/blend2d/playground/main.cpp",
+  "output": "CMakeFiles/app.dir/main.cpp.o"
+}
+]
