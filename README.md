@@ -39,14 +39,12 @@ $ cd graffiti
 
 ```
 $ mkdir build cd build
-
 ```
 
 4. Run CMake to generate the build files:
 
 ```
 $ cmake ..
-
 ```
 
 5. Build the project:
@@ -73,7 +71,6 @@ cmake ..
 cmake --build .
 # optional install
 make install
-
 ```
 
 ## Why Graffiti?
