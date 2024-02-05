@@ -1,3 +1,5 @@
+![logo](examples/moon.png)
+
 # GRAFFITI
 
 Graffiti is a dynamic, open-source project aimed at providing an easy-to-use platform for enthusiasts and designers to create logos and images from instructions. These creations can then be exported to PNG files. Graffiti uses the high-performance 2D vector graphics library [Blend2D](https://blend2d.com/) to render images. This allows for a unique blend of programming and design, opening up new possibilities for digital art.
