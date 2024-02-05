@@ -19,7 +19,7 @@ star = g.image(128px,128px)
 		.stroke(0x55FFFFFF, { width = 5px })
 	.close()
 
-g.image(512px,512px)
+g.image(512px ,512 px)
 	.fill(black)
 	.fill(star)
 	.circle(50,50,40)

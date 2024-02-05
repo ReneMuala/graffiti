@@ -73,6 +73,8 @@ cmake --build .
 make install
 ```
 
+> Make sure to use tabs instad of spaces when writting graffiti code
+
 ## Why Graffiti?
 
 Graffiti provides a unique blend of design and programming, allowing users to create intricate and customizable images using scripts. This opens up a new realm of possibilities for digital art, making it accessible to both designers and programmers. With its extensive feature set, Graffiti offers a level of automation and precision that is hard to achieve with conventional design tools. Whether you're a designer looking to automate your workflows or a programmer interested in exploring the world of design, Graffiti is the tool for you.
