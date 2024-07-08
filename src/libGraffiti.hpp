@@ -1,6 +1,4 @@
 #pragma once
-#include "Version.hpp"
-#include "lua.h"
 #include <blend2d.h>
 #include <sol/sol.hpp>
 
@@ -77,6 +75,7 @@ void context_rotate(unsigned long long native_index, double angle, double cx, do
 void context_resize(unsigned long long native_index, double x, double y);
 void context_translate(unsigned long long native_index, double x, double y);
 void context_closepath(unsigned long long native_index);
+void context_import(unsigned long long native_index,std::string filename); // v1.1
 } // namespace _graffiti_native
 
 void resolveGraffitiLibrary(sol::state &lua);

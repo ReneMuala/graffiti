@@ -34,11 +34,11 @@ public:
 
   string resolveStrings(string line) {
     smatch match;
-    while (regex_search(line, match, regex(R"(\(\s*[^\,(]+\.\w+\s*\))"))) {
+    while (regex_search(line, match, regex(R"(\(\s*[^\,(]+\.(jpg|jpeg|png|gif|bmp|svg|webp)\s*\))"))) {
       line = line.replace(
           line.find(match.str()), match.str().length(),
           std::format("{}", regex_replace(match.str(),
-                                          regex(R"([^\(,]+\.\w+\s*)"),
+                                          regex(R"([^\(,]+\.(jpg|jpeg|png|gif|bmp|svg|webp)\s*)"),
                                           "\"$&\"")));
     }
     return line;
@@ -81,13 +81,14 @@ public:
     return line;
   }
 
-  void read() {
+  bool read() {
+    if(not file.is_open()) return false;
     string line;
     while (getline(file, line)) {
       auto aux = resolveCm(
           resolvePx(resolveDeg(resolveLeading(resolveStrings(resolveContext(line))))));
       result += aux + "\n";
       // cout << aux << endl;
-    }
+    }return true;
   }
 };

@@ -1,14 +1,11 @@
 [
 {
-  "directory": "/home/descartes/Documents/workspaces/blend2d/playground/build",
-  "command": "/usr/bin/c++  -I/home/descartes/Documents/workspaces/blend2d/playground/libs/luacpp/Source -I/usr/include/lua5.4 -I/home/descartes/Documents/workspaces/blend2d/playground/libs -std=gnu++20 -o CMakeFiles/graffitiApi.dir/libGraffiti.cpp.o -c /home/descartes/Documents/workspaces/blend2d/playground/libGraffiti.cpp",
-  "file": "/home/descartes/Documents/workspaces/blend2d/playground/libGraffiti.cpp",
-  "output": "CMakeFiles/graffitiApi.dir/libGraffiti.cpp.o"
+  "directory": "C:\\Users\\dte\\Documents\\GitHub\\graffiti",
+  "arguments": ["C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.40.33807\\bin\\HostX64\\x64\\cl.exe", "/c", "/nologo", "/O2", "/std:c++20", "/DBL_STATIC", "/DASMJIT_STATIC", "/EHsc", "/IC:\\Users\\dte\\AppData\\Local\\.xmake\\packages\\b\\blend2d\\0.11.1\\7ea0e27a0c5a43dfa3ce8b8acf269e29\\include", "/IC:\\Users\\dte\\AppData\\Local\\.xmake\\packages\\a\\asmjit\\2024.05.21\\1d439cad43c94d4290e08811493113a5\\include", "/IC:\\Users\\dte\\AppData\\Local\\.xmake\\packages\\s\\sol2\\v3.3.0\\1aa9b23f2d2040d49728efabdcb8d03d\\include", "/IC:\\Users\\dte\\AppData\\Local\\.xmake\\packages\\l\\lua\\v5.4.7\\df5fbfc5131f49e3a571b07af9089027\\include\\lua", "/DNDEBUG", "/Fobuild\\.objs\\graffiti\\windows\\x64\\release\\src\\main.cpp.obj", "src\\main.cpp"],
+  "file": "src\\main.cpp"
 },
 {
-  "directory": "/home/descartes/Documents/workspaces/blend2d/playground/build",
-  "command": "/usr/bin/c++  -I/home/descartes/Documents/workspaces/blend2d/playground/libs/luacpp/Source -I/usr/include/lua5.4 -I/home/descartes/Documents/workspaces/blend2d/playground/libs -std=gnu++20 -o CMakeFiles/app.dir/main.cpp.o -c /home/descartes/Documents/workspaces/blend2d/playground/main.cpp",
-  "file": "/home/descartes/Documents/workspaces/blend2d/playground/main.cpp",
-  "output": "CMakeFiles/app.dir/main.cpp.o"
-}
-]
+  "directory": "C:\\Users\\dte\\Documents\\GitHub\\graffiti",
+  "arguments": ["C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.40.33807\\bin\\HostX64\\x64\\cl.exe", "/c", "/nologo", "/O2", "/std:c++20", "/DBL_STATIC", "/DASMJIT_STATIC", "/EHsc", "/IC:\\Users\\dte\\AppData\\Local\\.xmake\\packages\\b\\blend2d\\0.11.1\\7ea0e27a0c5a43dfa3ce8b8acf269e29\\include", "/IC:\\Users\\dte\\AppData\\Local\\.xmake\\packages\\a\\asmjit\\2024.05.21\\1d439cad43c94d4290e08811493113a5\\include", "/IC:\\Users\\dte\\AppData\\Local\\.xmake\\packages\\s\\sol2\\v3.3.0\\1aa9b23f2d2040d49728efabdcb8d03d\\include", "/IC:\\Users\\dte\\AppData\\Local\\.xmake\\packages\\l\\lua\\v5.4.7\\df5fbfc5131f49e3a571b07af9089027\\include\\lua", "/DNDEBUG", "/Fobuild\\.objs\\graffitiApi\\windows\\x64\\release\\src\\libGraffiti.cpp.obj", "src\\libGraffiti.cpp"],
+  "file": "src\\libGraffiti.cpp"
+}]

@@ -2,6 +2,10 @@
 
 #include "Gradient.hpp"
 #include "TextPath.hpp"
+#include "blend2d/api.h"
+#include "blend2d/array.h"
+#include "blend2d/image.h"
+#include "blend2d/imagecodec.h"
 #include <blend2d.h>
 #include <blend2d/geometry.h>
 #include <blend2d/gradient.h>
@@ -34,6 +38,7 @@ public:
     // std::cout << __FUNCTION__ << " | new context " << width << " x " << height
               // << std::endl;
   }
+
   void clearContext() { context.clearAll(); }
   /// binds the child context to the super
   void resolveChild(bool strokeResolution = false) {
@@ -65,6 +70,16 @@ public:
   }
 
   void _export(std::string filename) { image.writeToFile(filename.c_str()); }
+
+  void _import(std::string filename) {
+    BLImage importedImage;
+    auto result = importedImage.readFromFile(filename.c_str());
+    if(result == BL_SUCCESS) {
+      fill(BLPattern(importedImage));
+    } else {
+      std::cerr << "Error reading image from file: " << filename << std::endl;
+    }
+  }
 
   inline void box(double x0, double y0, double x1, double y1) {
     path.addBox(x0, y0, x1, y1);
@@ -200,7 +215,7 @@ public:
       }
       super->get().resetStrokeStyle();
     } else {
-      std::cerr << __FUNCTION__ << ": No enough contitions for stroke\n";
+      std::cerr << __FUNCTION__ << ": No enough conditions for stroke\n";
     }
   }
 

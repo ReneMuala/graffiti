@@ -2,6 +2,7 @@
 #include "Context.hpp"
 #include "Font.hpp"
 #include "Gradient.hpp"
+#include "Version.hpp"
 #include "sol/forward.hpp"
 #include "sol/optional_implementation.hpp"
 #include <deque>
@@ -552,7 +553,7 @@ void context_resize(unsigned long long native_index, double x, double y) {
                                          native_index));
   }
   Context *context_p = (Context *)(native_index);
-  context_p->resize(resolveValue(x), resolveValue(y));
+  context_p->resize(x, y);
 }
 
 void context_translate(unsigned long long native_index, double x, double y) {
@@ -562,7 +563,7 @@ void context_translate(unsigned long long native_index, double x, double y) {
                                          native_index));
   }
   Context *context_p = (Context *)(native_index);
-  context_p->translate(x, y);
+  context_p->translate(resolveValue(x), resolveValue(y));
 }
 
 void context_closepath(unsigned long long native_index) {
@@ -574,12 +575,22 @@ void context_closepath(unsigned long long native_index) {
   Context *context_p = (Context *)(native_index);
   context_p->closePath();
 }
+
+void context_import(unsigned long long native_index, std::string filename) {
+  if (not native_index) {
+    throw std::runtime_error(std::format("{}: {} {}", __FUNCTION__,
+                                         "Invalid context native_index",
+                                         native_index));
+  }
+  Context *context_p = (Context *)(native_index);
+  context_p->_import(filename);
+}
 } // namespace _graffiti_native
 
 void resolveGraffitiLibrary(sol::state &lua) {
+  lua.set_function("_graffiti_native_new_image", _graffiti_native::new_image);
   lua.set_function("_graffiti_native_show_version",
                    _graffiti_native::show_version);
-  lua.set_function("_graffiti_native_new_image", _graffiti_native::new_image);
   lua.set_function("_graffiti_native_unit_pixel", _graffiti_native::unit_pixel);
   lua.set_function("_graffiti_native_unit_cm", _graffiti_native::unit_cm);
   lua.set_function("_graffiti_native_get_width", _graffiti_native::get_width);
@@ -677,6 +688,8 @@ void resolveGraffitiLibrary(sol::state &lua) {
                    _graffiti_native::context_translate);
   lua.set_function("_graffiti_native_context_closepath",
                    _graffiti_native::context_closepath);
+  lua.set_function("_graffiti_native_context_import",
+                   _graffiti_native::context_import);
 }
 
 /*

@@ -1,4 +1,8 @@
-unit = {}
+#pragma once
+
+namespace scripts {
+    constexpr auto libGraffiti = R"LUASCRIPT(
+    unit = {}
 
 unit.__index = unit
 
@@ -327,7 +331,7 @@ function gc:new(width, height, native_index)
         _graffiti_native_context_export(g.native_index, filename)
         return g
     end
-
+    
     g.import = function(filename)
         _graffiti_native_context_import(g.native_index, filename)
         return g
@@ -412,3 +416,6 @@ gradient = Gradient
 Graffiti.__index = Graffiti
 
 g = Graffiti
+
+    )LUASCRIPT";
+}
